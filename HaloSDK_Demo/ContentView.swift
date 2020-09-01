@@ -11,21 +11,36 @@ import HaloSDK
 
 struct ContentView: View {
     
+    @State var appId: String = ""
+    @State var orderId: String = ""
+    
     var body: some View {
         VStack{
             Spacer()
-            Button(action: {
-                HaloSDK.authorization(withAppId: "11")
-            }, label: {
-                Text("授权")
+            VStack(alignment: .center, spacing: 10, content: {
+                
+                TextField("输入授权AppId", text: $appId)
+                    .font(.largeTitle)
+                    .fixedSize()
+                Button(action: {
+                    print(self.appId)
+                    HaloSDK.authorization(withAppId: self.appId)
+                }, label: {
+                    Text("授权")
+                })
             })
             Spacer()
-            Button(action: {
-                HaloSDK.pay(withOrderId: "1598235840330")
-            }, label: {
-                Text("支付")
+            VStack(alignment: .center, spacing: 10, content: {
+                TextField("输入支付OrderId", text: $orderId)
+                    .font(.largeTitle)
+                    .fixedSize()
+                Button(action: {
+                    HaloSDK.pay(withOrderId: self.orderId)
+                }, label: {
+                    Text("支付")
+                })
             })
-            Spacer()
+            Spacer().disabled(true)
             Button(action: {
                 HaloSDK.recharge(withAppId: "11",
                                  openId: "1297717785318178817",
@@ -50,3 +65,10 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+//// 更通用的做法
+//extension UIApplication {
+//    func endEditing() {
+//        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//    }
+//}
