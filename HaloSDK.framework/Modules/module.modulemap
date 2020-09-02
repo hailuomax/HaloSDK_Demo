@@ -1,6 +1,0 @@
-framework module HaloSDK {
-  umbrella header "HaloSDK.h"
-
-  export *
-  module * { export * }
-}

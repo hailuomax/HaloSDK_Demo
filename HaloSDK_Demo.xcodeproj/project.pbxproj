@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940FFC7424F8EBAD009F59FD /* HaloSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940FFC7224F8EB9E009F59FD /* HaloSDK.framework */; };
-		940FFC7524F8EBAD009F59FD /* HaloSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 940FFC7224F8EB9E009F59FD /* HaloSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94D6EE8024F681DE008A7E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE7F24F681DE008A7E5C /* AppDelegate.swift */; };
 		94D6EE8224F681DE008A7E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE8124F681DE008A7E5C /* SceneDelegate.swift */; };
 		94D6EE8424F681DE008A7E5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE8324F681DE008A7E5C /* ContentView.swift */; };
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				940FFC7524F8EBAD009F59FD /* HaloSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		940FFC7224F8EB9E009F59FD /* HaloSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HaloSDK.framework; sourceTree = "<group>"; };
 		94D6EE7C24F681DE008A7E5C /* HaloSDK_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloSDK_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D6EE7F24F681DE008A7E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D6EE8124F681DE008A7E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940FFC7424F8EBAD009F59FD /* HaloSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +53,6 @@
 		948F00DE24F8A39400041820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				940FFC7224F8EB9E009F59FD /* HaloSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -321,6 +315,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = HaloSDK_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +340,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = HaloSDK_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
