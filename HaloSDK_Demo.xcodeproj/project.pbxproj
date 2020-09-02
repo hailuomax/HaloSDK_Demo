@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9408181924FF95A0009632E3 /* HaloSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408181724FF9596009632E3 /* HaloSDK.framework */; };
+		9408181A24FF95A0009632E3 /* HaloSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9408181724FF9596009632E3 /* HaloSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94D6EE8024F681DE008A7E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE7F24F681DE008A7E5C /* AppDelegate.swift */; };
 		94D6EE8224F681DE008A7E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE8124F681DE008A7E5C /* SceneDelegate.swift */; };
 		94D6EE8424F681DE008A7E5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EE8324F681DE008A7E5C /* ContentView.swift */; };
@@ -22,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9408181A24FF95A0009632E3 /* HaloSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9408181724FF9596009632E3 /* HaloSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HaloSDK.framework; sourceTree = "<group>"; };
 		94D6EE7C24F681DE008A7E5C /* HaloSDK_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloSDK_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D6EE7F24F681DE008A7E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D6EE8124F681DE008A7E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9408181924FF95A0009632E3 /* HaloSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,7 @@
 		948F00DE24F8A39400041820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9408181724FF9596009632E3 /* HaloSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

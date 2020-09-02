@@ -59,7 +59,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        
+        print(scene)
+        print(URLContexts)
+        guard let url: URL = URLContexts.first?.url else {return}
+        
+        if url.scheme == "halo.com.sdk.demo",
+           let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+           let queryItems = components.queryItems,
+           let host = components.host{
+            
+            let param = queryItems.reduce(into: [String:String]()) { result, item in
+                result[item.name] = item.value ?? ""
+            }
+            print(param)
+            
+            let alertAction: UIAlertAction = UIAlertAction(title: "确定", style: .default) { _ in
+                self.window!.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            
+            if host == "authorization"{
+                let alert: UIAlertController = UIAlertController(title: "授权成功", message: param["code"], preferredStyle: .alert)
+                alert.addAction(alertAction)
+                self.window!.rootViewController?.present(alert, animated: true, completion: nil)
+            }else if host == "pay"{
+                let alert: UIAlertController = UIAlertController(title: "支付成功", message: nil, preferredStyle: .alert)
+                alert.addAction(alertAction)
+                self.window!.rootViewController?.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+    }
 }
 
 
