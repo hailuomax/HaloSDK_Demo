@@ -80,7 +80,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
             
             if host == "authorization"{
-                let alert: UIAlertController = UIAlertController(title: "授权成功", message: param["code"], preferredStyle: .alert)
+                let alert: UIAlertController = UIAlertController(title: param["code"], message: param["msg"], preferredStyle: .alert)
                 alert.addAction(alertAction)
                 self.window!.rootViewController?.present(alert, animated: true, completion: nil)
             }else if host == "pay"{
